@@ -7,17 +7,17 @@
 
 <h2>Naina Sahiri orders a computer.</h2>
 <form>
-    <input type="checkbox" id="cb1_mem" name="Memory"   
+    <input type="checkbox" id="checkbox1" name="Memory"   
       value="extra">
-    <label for="cb1_mem">Extra memory</label></br>
+    <label for="checkbox1">Extra memory</label></br>
   
-    <input type="checkbox" id="cb1_mou" name="mouse" 
+    <input type="checkbox" id="checkbox2" name="mouse" 
        value="mouse">
-    <label for="cb1_mou">Mouse</label></br>
+    <label for="checkbox2">Mouse</label></br>
   
-    <input type="checkbox" id="cb1_ce" name="cell"   
+    <input type="checkbox" id="checkbox3" name="cell"   
        value="cell" >
-    <label for="cb1_ce">Cell service</label></br>
+    <label for="checkbox3">Cell service</label></br>
 
     <input type="button" onclick="orderComputer()" value="Order a computer">
   </form>
@@ -32,16 +32,16 @@
 </form>
 
 
-  <p id="result">output</p>
-  <p id="updatedresult">new property</p>
+  <p id="res">output</p>
+  <p id="updatedres">new property</p>
 
   <script> 
  var my_computer ={};
  
  function orderComputer(){
-    mem = document.getElementById("cb1_mem")
-    mou = document.getElementById("cb1_mou")
-    cel = document.getElementById("cb1_ce")
+    mem = document.getElementById("checkbox1")
+    mou = document.getElementById("checkbox2")
+    cel = document.getElementById("checkbox3")
     my_computer["mem"]=false;
     my_computer["mou"]=false;
     my_computer["cel"]=false;
@@ -63,7 +63,7 @@
         my_computer["cel"]=true;
       
     }
-    document.getElementById("result").innerHTML = "Extra Memory :" + my_computer.mem + ",  " +"Mouse : "+ my_computer.mou + ",  " + "Cell : " + my_computer.cel ;
+    document.getElementById("res").innerHTML = "Extra Memory :" + my_computer.mem + ",  " +"Mouse : "+ my_computer.mou + ",  " + "Cell : " + my_computer.cel ;
 }
 function updateComputer(){
     console.log("Getting form values")
@@ -71,7 +71,7 @@ function updateComputer(){
     valu = document.getElementById("val").value
     my_computer["prop"]=valu;
 
-    document.getElementById("updatedresult").innerHTML="Extra Memory :" + my_computer.mem + ",  " +"Mouse : "+ my_computer.mou + ",  " + "Cell : " + my_computer.cel+" , "+prop+" :" +my_computer.prop;
+    document.getElementById("updatedres").innerHTML="Extra Memory :" + my_computer.mem + ",  " +"Mouse : "+ my_computer.mou + ",  " + "Cell : " + my_computer.cel+" , "+prop+" :" +my_computer.prop;
   
     
 }
