@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+ 
+<body>
+<head><title>Checkboxes</title></head>
+<body>
+
+<h2>Naina Sahiri orders a computer.</h2>
+<form>
+    <input type="checkbox" id="cb1_mem" name="Memory"   
+      value="extra">
+    <label for="cb1_mem">Extra memory</label></br>
+  
+    <input type="checkbox" id="cb1_mou" name="mouse" 
+       value="mouse">
+    <label for="cb1_mou">Mouse</label></br>
+  
+    <input type="checkbox" id="cb1_ce" name="cell"   
+       value="cell" >
+    <label for="cb1_ce">Cell service</label></br>
+
+    <input type="button" onclick="orderComputer()" value="Order a computer">
+  </form>
+  <form>
+    <label for="eng">Enter a property name </label>
+    <input type ="text" id="eng" name="engrave"  value="engraved"> <br>
+
+    <label for="val">Enter a value </label>
+    <input type ="text" id="val" name="value" autofocus> <br>
+
+    <input type="button" onclick="updateComputer()" value="Update the computer">
+</form>
+
+
+  <p id="result">output</p>
+  <p id="updatedresult">new property</p>
+
+  <script> 
+ var my_computer ={};
+ 
+ function orderComputer(){
+    mem = document.getElementById("cb1_mem")
+    mou = document.getElementById("cb1_mou")
+    cel = document.getElementById("cb1_ce")
+    my_computer["mem"]=false;
+    my_computer["mou"]=false;
+    my_computer["cel"]=false;
+    
+    if(mem.checked){
+        my_computer["mem"]=true;
+        
+    }
+    
+    
+    if(mou.checked){
+      
+        my_computer["mou"]=true;
+        
+    }
+    
+    
+    if(cel.checked){
+        my_computer["cel"]=true;
+      
+    }
+    document.getElementById("result").innerHTML = "Extra Memory :" + my_computer.mem + ",  " +"Mouse : "+ my_computer.mou + ",  " + "Cell : " + my_computer.cel ;
+}
+function updateComputer(){
+    console.log("Getting form values")
+    prop = document.getElementById("eng").value
+    valu = document.getElementById("val").value
+    my_computer["prop"]=valu;
+
+    document.getElementById("updatedresult").innerHTML="Extra Memory :" + my_computer.mem + ",  " +"Mouse : "+ my_computer.mou + ",  " + "Cell : " + my_computer.cel+" , "+prop+" :" +my_computer.prop;
+  
+    
+}
+</script>
+
+</body>
+</html>
