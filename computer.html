@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html>
- 
 <body>
 <head><title>Checkboxes</title></head>
 <body>
-
 <h2>Naina Sahiri orders a computer.</h2>
 <form>
     <input type="checkbox" id="checkbox1" name="Memory"   
       value="extra">
     <label for="checkbox1">Extra memory</label></br>
-  
     <input type="checkbox" id="checkbox2" name="mouse" 
        value="mouse">
     <label for="checkbox2">Mouse</label></br>
@@ -30,14 +27,10 @@
 
     <input type="button" onclick="updateComputer()" value="Update the computer">
 </form>
-
-
   <p id="res">output</p>
   <p id="updatedres">new property</p>
-
   <script> 
  var my_computer ={};
- 
  function orderComputer(){
     mem = document.getElementById("checkbox1")
     mou = document.getElementById("checkbox2")
@@ -45,20 +38,12 @@
     my_computer["mem"]=false;
     my_computer["mou"]=false;
     my_computer["cel"]=false;
-    
     if(mem.checked){
-        my_computer["mem"]=true;
-        
+        my_computer["mem"]=true;    
     }
-    
-    
     if(mou.checked){
-      
-        my_computer["mou"]=true;
-        
+        my_computer["mou"]=true;   
     }
-    
-    
     if(cel.checked){
         my_computer["cel"]=true;
       
@@ -72,8 +57,6 @@ function updateComputer(){
     my_computer["prop"]=valu;
 
     document.getElementById("updatedres").innerHTML="Extra Memory :" + my_computer.mem + ",  " +"Mouse : "+ my_computer.mou + ",  " + "Cell : " + my_computer.cel+" , "+prop+" :" +my_computer.prop;
-  
-    
 }
 </script>
 
