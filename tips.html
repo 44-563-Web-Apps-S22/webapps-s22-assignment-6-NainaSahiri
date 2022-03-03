@@ -36,13 +36,10 @@ function tips(){
     let incr=parseFloat(tip*amount).toFixed(1);
     for(let i=0;i<10;i++){
         res=res+" "+(parseFloat(+(base)+(i*incr)).toFixed(1));
-  
     }
-   
-    document.getElementById('res').innerHTML =res; 
+   document.getElementById('res').innerHTML =res; 
 }
 </script>
-
 <form>
     <input type="radio" id="1" onclick="chooseOp()">
     <label for="1" value="times">*</label></br>
@@ -50,12 +47,9 @@ function tips(){
     <label for="2" value="divide">/</label></br>
     <input type="radio" id="3" onclick="chooseOp()">
     <label for="3" value="exponent">**</label></br>
-    
-    
     </form>
     <p id="rad">This text </p>
-   
-    <script>
+   <script>
         function chooseOp(){
             
             amount = document.getElementById("amount").value
@@ -74,10 +68,6 @@ function tips(){
             }
 
         }
-
-
-
-</script>
-
+    </script>
 </body>
 </html> 
